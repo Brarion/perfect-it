@@ -1,0 +1,19 @@
+@import '../../styles/colors';
+
+.button {
+  background: $blue-medium;
+
+  box-shadow: 0 4px 30px 2px rgba(255, 255, 255, 0.15), 0 20px 50px 20px rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: white;
+
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+}

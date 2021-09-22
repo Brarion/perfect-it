@@ -1,0 +1,13 @@
+@import '../../styles/colors';
+@import '../../styles/padding';
+
+.jumbotron {
+  height: 800px;
+  background: $background-jumbotron;
+  @include padding;
+
+  .wrapper {
+    position: relative;
+    height: 100%;
+  }
+}

@@ -1,0 +1,38 @@
+@import "../../styles/colors";
+@import "../../styles/padding";
+
+.unique {
+  position: relative;
+
+  height: 800px;
+  @include leftPadding;
+
+  background: url("../../assets/uniqueBackground.svg") no-repeat;
+  background-position-x: calc((100vw - 1800px + 2 * 320px) / 2 - 320px + 157px);
+
+  padding-top: 86px;
+
+  > h1 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 57px;
+
+    width: 1160px;
+
+    color: $blue-dark;
+
+    margin-bottom: 30px;
+  }
+
+  > h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+
+    width: 1183px;
+
+    color: $blue-dark;
+
+    margin-bottom: 180px;
+  }
+}

@@ -1,0 +1,31 @@
+@import '../../../../styles/colors';
+
+header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > * {
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    > * {
+      cursor: pointer;
+      text-decoration: none;
+
+      color: $blue-light;
+
+      &:not(:last-child) {
+        margin-right: 75px;
+      }
+    }
+
+    &.leftSide {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

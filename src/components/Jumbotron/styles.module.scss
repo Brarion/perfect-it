@@ -5,6 +5,7 @@
   height: 800px;
   background: $background-jumbotron;
   @include padding;
+  overflow: hidden;
 
   .wrapper {
     position: relative;

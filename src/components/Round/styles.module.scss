@@ -1,0 +1,37 @@
+@import '../../styles/colors';
+@import '../../styles/padding';
+
+.round {
+  position: relative;
+
+  height: 1000px;
+  background-color: $background-jumbotron;
+
+  color: $blue-dark;
+  font-size: 18px;
+  line-height: 21px;
+
+  @include padding;
+  padding-top: 82px;
+
+  > h1 {
+    position: absolute;
+    color: $blue-dark;
+
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 57px;
+
+    z-index: 10000;
+  }
+
+  > *:nth-child(n+2) {
+    margin: 30px auto 0 auto;
+  }
+
+  .buttonWrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../styles/colors";
+@import "../../styles/padding";
+
+.features {
+  @include padding;
+  height: 800px;
+
+  > h1 {
+    padding-top: 82px;
+    padding-bottom: 94px;
+
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 57px;
+
+    color: $blue-dark;
+  }
+}

@@ -27,8 +27,6 @@ const Carousel = () => {
     }
   }
 
-  console.log(gradientWidth)
-
   return <div className={styles.wrapper}>
     <div className={styles.carousel} onScroll={scroll}>
       {data.map((item, index) =>

@@ -1,0 +1,21 @@
+@import '../../styles/colors';
+@import '../../styles/padding';
+
+$paddingTop: 80px;
+
+.sources {
+  height: calc(600px - #{$paddingTop});
+  background: $background-jumbotron;
+  @include leftPadding;
+  padding-top: $paddingTop;
+
+  > h1 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 57px;
+
+    color: $blue-dark;
+
+    padding-bottom: 30px;
+  }
+}

@@ -8,6 +8,7 @@
   height: 640px;
 
   .bigCircle {
+    z-index: 10;
     position: absolute;
     top: 0;
     left: 0;
@@ -73,6 +74,7 @@
   }
 
   .mediumCircle {
+    z-index: 9;
     position: absolute;
     top: calc((640px - 482px) / 2);
     left: calc((640px - 482px) / 2);
@@ -144,6 +146,7 @@
   }
 
   .littleCircle {
+    z-index: 8;
     position: absolute;
     top: calc((640px - 311px) / 2);
     left: calc((640px - 311px) / 2);
@@ -215,6 +218,7 @@
   }
 
   .centerCircle {
+    z-index: 7;
     position: absolute;
     top: calc((640px - 121px) / 2);
     left: calc((640px - 121px) / 2);
@@ -261,6 +265,7 @@
   }
 
   .superLittleCircle {
+    z-index: 6;
     position: absolute;
     top: calc((640px - 180px) / 2);
     left: calc((640px - 180px) / 2);

@@ -1,0 +1,74 @@
+@import '../../styles/colors';
+@import '../../styles/padding';
+
+.roadMap {
+  height: 1800px;
+  background: url('../../assets/roadMapBackground.svg') no-repeat;
+
+  @include padding;
+  padding-top: 82px;
+
+  > h1 {
+    color: $blue-dark;
+
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 57px;
+
+    white-space: pre-line;
+
+    padding-bottom: 30px;
+  }
+
+  > h2 {
+    color: $blue-dark;
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+
+    white-space: pre-line;
+
+    padding-bottom: 130px;
+  }
+
+  .roadMapItems {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    row-gap: 112px;
+
+    .roadMapImage {
+      position: absolute;
+      top: 256px;
+      left: -85px
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+
+      >* {
+        color: $blue-medium;
+
+        &:first-child {
+          margin-right: 30px;
+
+          font-weight: 600;
+          font-size: 96px;
+          line-height: 115px;
+        }
+
+        &:last-child {
+          font-size: 20px;
+          line-height: 24px;
+
+          white-space: pre-line;
+        }
+      }
+    }
+  }
+}

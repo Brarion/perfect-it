@@ -33,24 +33,9 @@
     cursor: pointer;
     position: relative;
     z-index: 1;
-
-    &:before,
-    &:after {
-      content: " ";
-      display: block;
-      position: absolute;
-      border: 1px solid $blue-medium;
-      left: -2px;
-      right: -2px;
-      top: -8px;
-      bottom: -8px;
-      border-radius: 20px;
-
-      animation: animate 2s ease-out infinite;
-    }
   }
 
-  .secondBorder {
+  .firstBorder, .secondBorder {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -66,14 +51,20 @@
       display: block;
       position: absolute;
       border: 1px solid $blue-medium;
-      left: -2px;
-      right: -2px;
-      top: -8px;
-      bottom: -8px;
+      left: -0px;
+      right: -0px;
+      top: -0px;
+      bottom: -0px;
       border-radius: 20px;
 
       animation: animate 2s ease-out infinite;
-      animation-delay: 1s;
+    }
+
+    &.firstBorder {
+      &:before,
+      &:after {
+        animation-delay: 1s;
+      }
     }
   }
 }
@@ -87,7 +78,7 @@
   }
   to
   {
-    transform: scale(1.1);
+    transform: scale(1.1, 1.4);
     opacity: 0;
   }
 }

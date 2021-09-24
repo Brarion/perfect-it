@@ -8,6 +8,7 @@ const PulseButton = () => {
       <a className={styles.button} href={'tel:+7-800-000-00-00'}>
         Позвонить 8 (800) 000-00-00
       </a>
+      <div className={styles.firstBorder} />
       <div className={styles.secondBorder} />
     </div>
   )

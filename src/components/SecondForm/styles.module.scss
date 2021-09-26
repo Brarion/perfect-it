@@ -1,0 +1,71 @@
+@import "../../styles/colors";
+@import "../../styles/padding";
+
+.secondForm {
+  background: url('../../assets/roadMapBackground.svg');
+  background-position-x: calc((100vw - 1800px + 2 * 320px) / 2 - 320px);
+
+  @include padding;
+  padding-top: 96px;
+
+  height: calc(417px - 96px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .leftSide {
+    display: flex;
+    align-items: center;
+
+    color: $blue-dark;
+
+    margin-bottom: 110px;
+
+    > h1 {
+      white-space: pre-line;
+
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 57px;
+    }
+  }
+
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: auto;
+    > * {
+      &:first-child {
+        margin-bottom: 32px !important;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      &:nth-last-child(2) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .loading {
+      height: 21px;
+
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 21px;
+
+      color: $blue-medium;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > span {
+        margin-left: 5px;
+      }
+    }
+  }
+}

@@ -59,8 +59,6 @@ const ApplicantForm = () => {
         },
       })
       .then(async (response) => {
-        const fileId = response.data[0].id
-
         await axios
           .post(
             'http://localhost:1337/applicants',

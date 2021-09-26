@@ -9,6 +9,7 @@ import RoadMap from './components/RoadMap'
 import BigForm from './components/BigForm'
 import axios from 'axios'
 import SecondForm from './components/SecondForm'
+import Footer from './components/Footer'
 
 type Local = {
   jwt: string
@@ -36,6 +37,7 @@ const App = () => {
       <RoadMap />
       <BigForm />
       <SecondForm />
+      <Footer />
     </>
   )
 }

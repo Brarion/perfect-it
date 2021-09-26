@@ -7,7 +7,6 @@ header {
   align-items: center;
 
   > * {
-    font-family: 'SF Pro Display', sans-serif;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
@@ -34,6 +33,35 @@ header {
     &.leftSide {
       display: flex;
       align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1799px) {
+  header {
+    height: 70px;
+
+    > * {
+      &.leftSide {
+        font-weight: 600;
+
+        > *:first-child {
+          margin-right: 156px;
+        }
+
+        > span {
+          &:not(:last-child) {
+            margin-right: 37px;
+          }
+        }
+      }
+
+      &.phone {
+        font-weight: bold;
+      }
+
+      font-size: 16px;
+      line-height: 19px;
     }
   }
 }

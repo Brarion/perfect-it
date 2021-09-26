@@ -12,3 +12,11 @@
     height: 100%;
   }
 }
+
+@media screen and (max-width: 1799px) {
+  .jumbotron {
+    height: 1080px;
+
+    @include mediumPadding;
+  }
+}

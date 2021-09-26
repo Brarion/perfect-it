@@ -6,8 +6,21 @@
   width: 327px;
   height: 90px;
 
+  &:hover {
+    .firstBorder, .secondBorder {
+      &:before,
+      &:after {
+        border: 1px solid $hover-button;
+      }
+    }
+  }
+
   .button {
     background: $blue-medium;
+
+    &:hover {
+      background-color: $hover-button;
+    }
 
     display: flex;
     justify-content: center;

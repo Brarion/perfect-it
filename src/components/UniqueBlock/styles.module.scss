@@ -4,10 +4,10 @@
 .unique {
   position: relative;
 
-  height: 800px;
+  height: calc(800px - 86px);
   @include leftPadding;
 
-  background: url("../../assets/uniqueBackground.svg") no-repeat;
+  background: url("../../assets/uniqueBackground.svg");
   background-position-x: calc((100vw - 1800px + 2 * 320px) / 2 - 320px + 157px);
 
   padding-top: 86px;

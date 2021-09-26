@@ -16,7 +16,15 @@ header {
       cursor: pointer;
       text-decoration: none;
 
-      color: $blue-light;
+      color: $blue-dark;
+
+      &:hover {
+        color: $blue-light;
+      }
+
+      &.phone {
+        color: $blue-light;
+      }
 
       &:not(:last-child) {
         margin-right: 75px;

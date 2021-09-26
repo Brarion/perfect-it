@@ -1,0 +1,15 @@
+@import '../../styles/colors';
+@import '../../styles/padding';
+
+.bigFormWrapper {
+  @include padding;
+  padding-top: 77px;
+
+  height: calc(800px - 77px);
+
+  background-color: $background-jumbotron;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

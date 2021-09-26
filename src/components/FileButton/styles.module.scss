@@ -1,0 +1,47 @@
+@import "../../styles/colors";
+
+.buttonWrapper {
+  position: relative;
+
+  width: 416px;
+  height: 90px;
+
+  background-color: $blue-medium;
+  box-shadow: 0 4px 30px 2px rgba(255, 255, 255, 0.15), 0px 20px 50px 20px rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  > * {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+
+    &:not(.button) {
+      opacity: 0;
+    }
+
+    &.button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 21px;
+
+      color: white;
+
+      >*:first-child {
+        margin-right: 10px;
+        max-width: 250px;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

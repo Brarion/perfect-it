@@ -16,4 +16,8 @@
   border: none;
 
   cursor: pointer;
+
+  &:hover {
+    background: $hover-button;
+  }
 }

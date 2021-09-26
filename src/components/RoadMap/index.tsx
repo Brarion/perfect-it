@@ -13,12 +13,14 @@ const RoadMap = () => {
       <h2>{`В условиях конкурентного рынка ИТ, Perfect IT предлагает стать Вашим личным\nАгентом, что поможет строить Вам свою успешную профессиональную карьеру,\nразвиваться и постоянно повышать размер компенсации`}</h2>
       <div className={styles.roadMapItems}>
         <RoadMapImage className={styles.roadMapImage} />
-        {roadMapList.map((roadMapItem) => (
-          <div key={roadMapItem.index} className={styles.item}>
-            <span>{roadMapItem.index}</span>
-            <span>{roadMapItem.text}</span>
-          </div>
-        ))}
+        <div className={styles.roadMapItemsWrapper}>
+          {roadMapList.map((roadMapItem) => (
+            <div key={roadMapItem.index} className={styles.item}>
+              <span>{roadMapItem.index}</span>
+              <span>{roadMapItem.text}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )

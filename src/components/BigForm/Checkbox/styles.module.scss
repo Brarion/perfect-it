@@ -1,0 +1,32 @@
+@import "../../../styles/colors";
+
+.checkbox {
+  display: flex;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 14px;
+
+  .icon {
+    margin-right: 11px;
+    border: 1px solid rgba(69, 95, 237, 0.15);
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    width: 21px;
+    height: 21px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    cursor: pointer;
+  }
+
+  > span > a {
+    text-decoration: none;
+    color: $blue-dark;
+    color: $blue-dark;
+  }
+}

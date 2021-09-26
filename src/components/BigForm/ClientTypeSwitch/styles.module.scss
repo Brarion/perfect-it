@@ -1,0 +1,64 @@
+@import '../../../styles/colors';
+
+.switch {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 110px;
+
+  > h1 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 57px;
+
+    color: $blue-dark;
+
+    white-space: pre-line;
+
+    padding-bottom: 40px;
+  }
+
+  .buttonWrapper {
+    display: flex;
+
+    > button {
+      cursor: pointer;
+
+      color: $blue-medium;
+
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+
+      width: 275px;
+      height: 90px;
+
+      outline: none;
+      border: 2px solid $yellow;
+
+      background-color: transparent;
+
+      &.selected {
+        background-color: $yellow;
+        color: white;
+      }
+
+      &:not(.selected):hover {
+        color: $blue-light;
+      }
+
+      &:first-child {
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+
+        border-right: none;
+      }
+
+      &:last-child {
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+    }
+  }
+}

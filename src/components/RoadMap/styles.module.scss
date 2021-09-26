@@ -2,8 +2,9 @@
 @import '../../styles/padding';
 
 .roadMap {
-  height: 1800px;
-  background: url('../../assets/roadMapBackground.svg') no-repeat;
+  height: calc(1800px - 52px);
+  background: url('../../assets/roadMapBackground.svg');
+  background-position-x: calc((100vw - 1800px + 2 * 320px) / 2 - 320px);
 
   @include padding;
   padding-top: 82px;
@@ -35,32 +36,35 @@
   .roadMapItems {
     position: relative;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-
-    row-gap: 112px;
-
     .roadMapImage {
       position: absolute;
       top: 256px;
-      left: -85px
     }
 
-    .item {
-      display: flex;
-      align-items: center;
+    .roadMapItemsWrapper {
+      position: absolute;
+      left: 50px;
 
-      >* {
-        color: $blue-medium;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
 
-        &:first-child {
-          margin-right: 30px;
+      row-gap: 112px;
 
-          font-weight: 600;
-          font-size: 96px;
-          line-height: 115px;
-        }
+      .item {
+        display: flex;
+        align-items: center;
+
+        > * {
+          color: $blue-medium;
+
+          &:first-child {
+            margin-right: 30px;
+
+            font-weight: 600;
+            font-size: 96px;
+            line-height: 115px;
+          }
 
         &:last-child {
           font-size: 20px;
@@ -68,6 +72,7 @@
 
           white-space: pre-line;
         }
+      }
       }
     }
   }

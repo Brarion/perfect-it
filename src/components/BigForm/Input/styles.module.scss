@@ -1,0 +1,31 @@
+@import "../../../styles/colors";
+
+.input {
+  width: 416px;
+  height: calc(50px - 2px);
+
+  padding-top: 0;
+  padding-bottom: 0;
+
+
+  border: 1px solid rgba(69, 95, 237, 0.15);
+  outline: none;
+  border-radius: 8px;
+
+  padding-left: 20px;
+
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #02013D;
+
+  &::placeholder {
+    color: rgba(2, 0, 102, 0.6);
+  }
+
+  &.error {
+    border: 1px solid rgba(255, 0, 0, 0.87);
+  }
+}

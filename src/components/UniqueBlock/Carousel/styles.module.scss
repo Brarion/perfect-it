@@ -81,3 +81,27 @@
     }
   }
 }
+
+@media screen and (max-width: 959px) {
+  .wrapper {
+    width: calc(100vw - 40px);
+
+    .carousel {
+      .item {
+        flex-direction: column;
+        align-items: start;
+
+        margin-right: 75px;
+
+        >* {
+          &:first-child {
+            height: 50px;
+            width: 50px;
+
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

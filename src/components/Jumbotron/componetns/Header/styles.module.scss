@@ -37,6 +37,36 @@ header {
   }
 }
 
+@media screen and (max-width: 959px) {
+  header {
+    height: 50px;
+    margin-bottom: 259px;
+
+    > * {
+      &.leftSide {
+        font-weight: 600;
+
+        > *:first-child {
+        }
+
+        > span {
+          &:not(:last-child) {
+            margin-right: 37px;
+          }
+        }
+      }
+
+      &.phone {
+        font-weight: bold;
+      }
+
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}
+
+
 @media screen and (max-width: 1799px) {
   header {
     height: 70px;
@@ -46,12 +76,91 @@ header {
         font-weight: 600;
 
         > *:first-child {
-          margin-right: 156px;
+          width: 82px;
+          height: 28px;
+
+          z-index: 1000000000;
         }
 
         > span {
           &:not(:last-child) {
             margin-right: 37px;
+          }
+        }
+      }
+
+      &.littleHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        position: absolute;
+        top: 24px;
+        z-index: 100001;
+
+        &.opened {
+          position: fixed;
+          right: 20px;
+        }
+
+        .navToggle {
+          z-index: 9999;
+          position: relative;
+          background: transparent;
+          border: 1px solid transparent;
+          margin-left: auto;
+
+          &:focus {
+            outline-width: 0;
+          }
+
+          > * {
+            z-index: 9999;
+            background: white;
+            display: block;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .2s ease all;
+            transition: .2s ease all;
+
+            -webkit-transform-origin: right;
+            transform-origin: right;
+
+            height: 0;
+            width: 30px;
+            margin-bottom: 10px;
+            border: 1px solid #020066;
+            border-radius: 2px;
+          }
+
+          .bottom {
+            margin-bottom: 0;
+          }
+
+          &.opened {
+            > * {
+              background: white;
+              width: 32px;
+            }
+
+            .top {
+              -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+              -webkit-transform-origin: right center;
+              transform-origin: right center;
+            }
+
+            .middle {
+              opacity: 0;
+            }
+
+            .bottom {
+              -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+              -webkit-transform-origin: right center;
+              transform-origin: right center;
+            }
           }
         }
       }

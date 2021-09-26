@@ -5,11 +5,16 @@ import Main from './componetns/Main'
 
 import styles from './styles.module.scss'
 
-const Jumbotron = () => {
+type Props = {
+  burgerClick: () => void
+  openedBurger: boolean
+}
+
+const Jumbotron = ({ burgerClick, openedBurger }: Props) => {
   return (
     <div className={styles.jumbotron}>
       <div className={styles.wrapper}>
-        <Header />
+        <Header burgerClick={burgerClick} openedBurger={openedBurger} />
         <Main />
       </div>
     </div>

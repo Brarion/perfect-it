@@ -52,12 +52,14 @@ const Carousel = () => {
           </div>
         ))}
 
-        <div
-          className={`${gradientWidth < hideArrowValue ? styles.gradient : ''}`}
-          style={{ width: `${gradientWidth + gradientWidthValue}px` }}
-        />
+        {width >= 960 && (
+          <div
+            className={`${gradientWidth < hideArrowValue ? styles.gradient : ''}`}
+            style={{ width: `${gradientWidth + gradientWidthValue}px` }}
+          />
+        )}
       </div>
-      {gradientWidth < hideArrowValue && <Arrow className={styles.arrow} onClick={scrollNext} />}
+      {gradientWidth < hideArrowValue && width >= 960 && <Arrow className={styles.arrow} onClick={scrollNext} />}
     </div>
   )
 }

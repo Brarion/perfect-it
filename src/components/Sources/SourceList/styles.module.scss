@@ -63,3 +63,28 @@ $itemPaddingLeft: 20px;
     }
   }
 }
+
+
+@media screen and (max-width: 959px) {
+  .list {
+    flex-direction: column;
+    align-items: start;
+
+    .item {
+      width: calc(335px - #{$itemPaddingLeft});
+      height: calc(266px - #{$itemPaddingTop});
+
+      > h2 {
+        font-size: 20px;
+        line-height: 24px;
+
+        margin-bottom: 26px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+        margin-right: 0;
+      }
+    }
+  }
+}

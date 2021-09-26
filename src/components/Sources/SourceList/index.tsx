@@ -12,8 +12,8 @@ const SourceList = () => {
     <div className={styles.list}>
       {data.map((item) => (
         <div key={item.title} className={styles.item}>
-          <h2>{width >= 1800 ? item.title : width >= 376 ? item.titleMd : item.titleMd}</h2>
-          <h3>{width >= 1800 ? item.text : width >= 376 ? item.textMd : item.textMd}</h3>
+          <h2>{width >= 1800 ? item.title : width >= 960 ? item.titleMd : item.titleSm}</h2>
+          <h3>{width >= 1800 ? item.text : width >= 960 ? item.textMd : item.textSm}</h3>
         </div>
       ))}
     </div>

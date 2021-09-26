@@ -1,0 +1,69 @@
+.littleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  position: fixed;
+  top: 24px;
+
+  .navToggle {
+    z-index: 9999;
+    position: relative;
+    background: transparent;
+    border: 1px solid transparent;
+    margin-left: auto;
+
+    &:focus {
+      outline-width: 0;
+    }
+
+    > * {
+      z-index: 9999;
+      background: white;
+      display: block;
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .2s ease all;
+      transition: .2s ease all;
+
+      -webkit-transform-origin: right;
+      transform-origin: right;
+
+      height: 0;
+      width: 30px;
+      margin-bottom: 10px;
+      border: 1px solid #020066;
+      border-radius: 2px;
+    }
+
+    .bottom {
+      margin-bottom: 0;
+    }
+
+    &.opened {
+      > * {
+        background: white;
+        width: 32px;
+      }
+
+      .top {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: right center;
+        transform-origin: right center;
+      }
+
+      .middle {
+        opacity: 0;
+      }
+
+      .bottom {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transform-origin: right center;
+        transform-origin: right center;
+      }
+    }
+  }
+}

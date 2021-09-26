@@ -13,3 +13,11 @@
 @mixin leftMediumPadding {
   padding: 0 0 0 calc((100vw - 960px + 2 * 40px) / 2);
 }
+
+@mixin smallPadding {
+  padding: 0 20px;
+}
+
+@mixin leftMediumPadding {
+  padding: 0 0 0 20px;
+}

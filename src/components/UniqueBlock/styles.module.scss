@@ -70,3 +70,34 @@
     }
   }
 }
+
+@media screen and (max-width: 959px) {
+  .unique {
+    height: auto;
+
+    @include smallPadding;
+
+    background-position-x: calc((100vw - 375px + 2 * 20px) / 2 - 20px - 30px);
+    background-position-y: -80px;
+
+    padding-top: 90px;
+    padding-bottom: 20px;
+
+    > h1 {
+      font-size: 24px;
+      line-height: 29px;
+      width: 100%;
+
+      margin-bottom: 28px;
+    }
+
+    > h2 {
+      font-size: 18px;
+      line-height: 21px;
+
+      width: 100%;
+
+      margin-bottom: 52px;
+    }
+  }
+}

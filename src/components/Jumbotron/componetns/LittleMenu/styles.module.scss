@@ -1,0 +1,78 @@
+@import "../../../../styles/colors";
+@import "../../../../styles/padding";
+
+.littleMenu {
+  position: fixed;
+  height: 100vh;
+  width: calc(100vw + 2 * 20px);
+  z-index: 10001;
+
+  left: -20px;
+
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  .icon {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+
+    z-index: 101;
+
+    width: 82px;
+    height: 28px;
+  }
+
+  .main {
+    height: calc(100% - 82px - 260px);
+    display: flex;
+    flex-direction: column;
+    padding: 82px 0 260px 41px;
+    justify-content: center;
+
+    >* {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 36px;
+
+      color: $blue-dark;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .footer {
+    position: fixed;
+    height: calc(260px - 2 * 30px);
+    width: 100%;
+
+    bottom: 0;
+
+    background-color: $background-jumbotron;
+
+    padding: 30px 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    .phone, .mail {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+
+      color: $blue-light;
+
+      text-decoration: none;
+
+      margin-bottom: 10px;
+
+      &.mail {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

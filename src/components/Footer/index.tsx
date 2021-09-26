@@ -9,7 +9,7 @@ import styles from './styles.module.scss'
 
 const Footer = () => {
   return (
-    <div className={styles.footer}>
+    <div id={'contacts'} className={styles.footer}>
       <div className={styles.firstPart}>
         <div className={styles.firstCol}>
           <WhiteLogo />

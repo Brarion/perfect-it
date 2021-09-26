@@ -1,7 +1,7 @@
 @import "../../../styles/colors";
 
-$itemPaddingTop: 37px;
-$itemPaddingLeft: 33px;
+$itemPaddingTop: 30px;
+$itemPaddingLeft: 20px;
 
 .list {
   display: flex;
@@ -22,9 +22,9 @@ $itemPaddingLeft: 33px;
       font-size: 36px;
       line-height: 43px;
 
-      width: 200px;
+      margin-bottom: 15px;
 
-      padding-bottom: 15px;
+      white-space: pre-line;
     }
 
     > h3 {
@@ -36,6 +36,30 @@ $itemPaddingLeft: 33px;
 
     &:not(:last-child) {
       margin-right: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 1799px) {
+  .list {
+    .item {
+      width: calc(280px - #{$itemPaddingLeft});
+      height: calc(272px - #{$itemPaddingTop});
+
+      > h2 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+      }
+
+      > h3 {
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
     }
   }
 }

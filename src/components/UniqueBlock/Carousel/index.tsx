@@ -1,5 +1,7 @@
 import React from 'react'
 
+import useResize from '../../../utils/useResize'
+
 import { ReactComponent as Arrow } from '../../../assets/arrow.svg'
 
 import styles from './styles.module.scss'
@@ -7,11 +9,18 @@ import styles from './styles.module.scss'
 import data from './data'
 
 const Carousel = () => {
-  const [gradientWidth, setGradientWidth] = React.useState<number>(1480)
+  const [gradientWidth, setGradientWidth] = React.useState<number>(0)
+
+  const width = useResize()
+
+  const gradientWidthValue = width >= 1800 ? 1480 : width >= 376 ? 800 : 800
+  const hideArrowValue = width >= 1800 ? 1800 : width >= 376 ? 1100 : 800
+
+  console.log(gradientWidth)
 
   // @ts-ignore
   const scroll = (e) => {
-    setGradientWidth(1480 + e.target.scrollLeft)
+    setGradientWidth(e.target.scrollLeft)
   }
 
   const scrollNext = () => {
@@ -39,13 +48,16 @@ const Carousel = () => {
         {data.map((item, index) => (
           <div className={styles.item} key={item.text} id={`carouselItem${index.toString()}`}>
             <item.icon />
-            <span>{item.text}</span>
+            <span>{width >= 1800 ? item.text : width >= 376 ? item.textMd : item.textMd}</span>
           </div>
         ))}
 
-        <div className={`${gradientWidth < 3000 ? styles.gradient : ''}`} style={{ width: `${gradientWidth}px` }} />
+        <div
+          className={`${gradientWidth < hideArrowValue ? styles.gradient : ''}`}
+          style={{ width: `${gradientWidth + gradientWidthValue}px` }}
+        />
       </div>
-      {gradientWidth < 3400 && <Arrow className={styles.arrow} onClick={scrollNext} />}
+      {gradientWidth < hideArrowValue && <Arrow className={styles.arrow} onClick={scrollNext} />}
     </div>
   )
 }

@@ -62,3 +62,14 @@
     }
   }
 }
+
+@media screen and (max-width: 1799px) {
+  .switch {
+    margin-bottom: 68px;
+
+     > h1 {
+       font-size: 36px;
+       line-height: 43px;
+     }
+  }
+}

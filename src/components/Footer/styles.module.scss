@@ -103,3 +103,14 @@
     align-items: center;
   }
 }
+
+@media screen and (max-width: 1799px) {
+  .footer {
+    .firstPart {
+      @include mediumPadding;
+      padding-top: 87px;
+
+      height: calc(272px - 87px);
+    }
+  }
+}

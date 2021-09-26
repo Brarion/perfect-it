@@ -69,3 +69,35 @@
     }
   }
 }
+
+@media screen and (max-width: 1799px) {
+  .secondForm {
+    background-position-x: calc((100vw - 960px + 2 * 40px) / 2 - 40px);
+
+    @include mediumPadding;
+    padding-top: 120px;
+
+    height: calc(461px - 120px);
+
+    align-items: start;
+
+    .leftSide {
+      position: relative;
+
+      > h1 {
+        font-size: 36px;
+        line-height: 43px;
+      }
+
+      .money {
+        position: absolute;
+
+        width: 61px;
+        height: 61px;
+
+        right: 12px;
+        bottom: -32px;
+      }
+    }
+  }
+}

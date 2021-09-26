@@ -13,3 +13,16 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@media screen and (max-width: 1799px){
+  .bigFormWrapper {
+    height: calc(953px - 120px);
+    @include mediumPadding;
+    padding-top: 120px;
+
+    flex-direction: column;
+
+    justify-content: start;
+    align-items: start;
+  }
+}

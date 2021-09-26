@@ -6,6 +6,8 @@
   background: url('../../assets/roadMapBackground.svg');
   background-position-x: calc((100vw - 1800px + 2 * 320px) / 2 - 320px);
 
+  overflow: hidden;
+
   @include padding;
   padding-top: 82px;
 
@@ -18,7 +20,7 @@
 
     white-space: pre-line;
 
-    padding-bottom: 30px;
+    margin-bottom: 30px;
   }
 
   > h2 {
@@ -30,7 +32,7 @@
 
     white-space: pre-line;
 
-    padding-bottom: 130px;
+    margin-bottom: 130px;
   }
 
   .roadMapItems {
@@ -66,13 +68,105 @@
             line-height: 115px;
           }
 
-        &:last-child {
-          font-size: 20px;
-          line-height: 24px;
+          &:last-child {
+            font-size: 20px;
+            line-height: 24px;
 
-          white-space: pre-line;
+            white-space: pre-line;
+          }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1799px) {
+  .roadMap {
+    height: 2033px;
+    background-position-x: calc((100vw - 960px + 2 * 40px) / 2 - 40px);
+
+    @include mediumPadding;
+    padding-top: 120px;
+
+    > h1 {
+      font-size: 36px;
+      line-height: 43px;
+
+      margin-bottom: 20px;
+    }
+
+    > h2 {
+      font-size: 24px;
+      line-height: 29px;
+
+      margin-bottom: 34px;
+    }
+
+    .roadMapItems {
+      .ellipse {
+        position: absolute;
+
+        &:first-child {
+          left: 0;
+          bottom: 1225px;
+        }
+
+        &:not(:first-child) {
+          left: 430px;
+          bottom: -43px;
+        }
+      }
+
+      .line1, .line2, .line3, .line4 {
+        position: absolute;
+
+        &.line1 {
+          left: 30px;
+          bottom: 1238px;
+        }
+
+        &.line2 {
+          left: calc((-100vw + 960px - 2 * 40px) / 2);
+          bottom: 825px;
+        }
+
+        &.line3 {
+          left: calc((-100vw + 960px - 2 * 40px) / 2);
+          bottom: 375px;
+        }
+
+        &.line4 {
+          right: 449px;
+          bottom: -30px;
+        }
+      }
+
+      .roadMapItemsWrapper {
+        position: relative;
+
+        left: 0;
+
+        row-gap: 95px;
+
+        .item {
+          flex-direction: column;
+          align-items: start;
+
+          > * {
+            &:first-child {
+              font-size: 96px;
+              line-height: 115px;
+
+              margin-right: 0;
+              margin-bottom: 25px;
+            }
+
+            &:last-child {
+              font-size: 20px;
+              line-height: 24px;
+            }
+          }
+        }
       }
     }
   }

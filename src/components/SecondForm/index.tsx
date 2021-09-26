@@ -1,5 +1,7 @@
 import React from 'react'
 
+import useResize from '../../utils/useResize'
+
 import axios from 'axios'
 
 import FileButton from '../FileButton'
@@ -27,6 +29,8 @@ const SecondForm = () => {
   const [formState, setFormState] = React.useState<FormState>(INITIAL_STATE)
   const [isValid, setIsValid] = React.useState<boolean>(false)
   const [loading, setLoading] = React.useState<boolean>(false)
+
+  const width = useResize()
 
   const validate = () => {
     setIsValid(!Object.entries(formState).filter(([key, value]) => key !== 'comment' && !value).length)
@@ -72,8 +76,12 @@ const SecondForm = () => {
   return (
     <div className={styles.secondForm}>
       <div className={styles.leftSide}>
-        <h1>{`Приведи друга,\nполучи вознаграждение!`}</h1>
-        <Money />
+        {width >= 1800 ? (
+          <h1>{`Приведи друга,\nполучи вознаграждение!`}</h1>
+        ) : (
+          width >= 376 && <h1>{`Приведи друга, получи\nвознаграждение!`}</h1>
+        )}
+        <Money className={styles.money} />
       </div>
       <div className={styles.rightSide}>
         <FileButton

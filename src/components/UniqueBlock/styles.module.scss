@@ -36,3 +36,37 @@
     margin-bottom: 180px;
   }
 }
+
+@media screen and (max-width: 1799px) {
+  .unique {
+    @include leftMediumPadding;
+
+
+    height: calc(747px - 120px);
+
+    background-position-x: calc((100vw - 960px + 2 * 40px) / 2 - 40px + 15px);
+    background-position-y: -50px;
+
+    padding-top: 120px;
+
+    > h1 {
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 43px;
+
+      margin-bottom: 20px;
+
+      width: 880px;
+    }
+
+    > h2 {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+
+      width: 728px;
+
+      margin-bottom: 77px;
+    }
+  }
+}

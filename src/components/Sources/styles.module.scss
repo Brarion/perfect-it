@@ -1,13 +1,11 @@
 @import '../../styles/colors';
 @import '../../styles/padding';
 
-$paddingTop: 80px;
-
 .sources {
-  height: calc(600px - #{$paddingTop});
+  height: calc(600px - 80px);
   background: $background-jumbotron;
   @include leftPadding;
-  padding-top: $paddingTop;
+  padding-top: 80px;
 
   > h1 {
     font-weight: 600;
@@ -17,5 +15,21 @@ $paddingTop: 80px;
     color: $blue-dark;
 
     padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1799px) {
+  .sources {
+    @include mediumPadding;
+    height: calc(590px - 120px);
+
+    padding-top: 120px;
+
+    > h1 {
+      font-size: 36px;
+      line-height: 43px;
+      padding: 0;
+      margin-bottom: 35px;
+    }
   }
 }

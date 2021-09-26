@@ -2,6 +2,7 @@
 @import '../../styles/padding';
 
 .round {
+  overflow: hidden;
   position: relative;
 
   height: 1000px;
@@ -26,12 +27,33 @@
   }
 
   > *:nth-child(n+2) {
-    margin: 30px auto 0 auto;
+    margin: 0 auto;
   }
 
   .buttonWrapper {
     display: flex;
     justify-content: center;
     padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 1799px) {
+  .round {
+    height: calc(1159px - 120px);
+
+    @include mediumPadding;
+    padding-top: 120px;
+
+    > h1 {
+      position: relative;
+      font-size: 36px;
+      line-height: 43px;
+
+      margin-bottom: 53px;
+    }
+
+    .buttonWrapper {
+      padding-top: 85px;
+    }
   }
 }

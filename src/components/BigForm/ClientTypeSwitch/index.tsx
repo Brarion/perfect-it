@@ -1,5 +1,7 @@
 import React from 'react'
 
+import useResize from '../../../utils/useResize'
+
 import { ClientType } from '../types'
 
 import styles from './styles.module.scss'
@@ -10,6 +12,8 @@ type Props = {
 }
 
 const ClientTypeSwitch = ({ selectedClientType, change }: Props) => {
+  const width = useResize()
+
   const setEmployer = () => {
     change(ClientType.EMPLOYER)
   }
@@ -20,7 +24,11 @@ const ClientTypeSwitch = ({ selectedClientType, change }: Props) => {
 
   return (
     <div className={styles.switch}>
-      <h1>{`Присоединяйся\nк нашему\nквалифицированному\nсообществу`}</h1>
+      {width >= 1800 ? (
+        <h1>{`Присоединяйся\nк нашему\nквалифицированному\nсообществу`}</h1>
+      ) : (
+        width >= 376 && <h1>{`Присоединяйся к нашему\nквалифицированному сообществу`}</h1>
+      )}
       <div className={styles.buttonWrapper}>
         <button className={selectedClientType === ClientType.EMPLOYER ? styles.selected : ''} onClick={setEmployer}>
           Я работодатель

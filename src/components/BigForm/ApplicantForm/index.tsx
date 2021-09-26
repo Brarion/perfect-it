@@ -83,52 +83,62 @@ const ApplicantForm = () => {
   }
 
   return (
-    <form className={styles.form}>
-      <Input value={formState.name} placeholder={'Имя'} change={(name) => setFormState({ ...formState, name })} />
-      <Input
-        value={formState.phone}
-        placeholder={'Телефон'}
-        change={(phone) => setFormState({ ...formState, phone })}
-        type={'tel'}
-      />
-      <Input value={formState.email} placeholder={'E-mail'} change={(email) => setFormState({ ...formState, email })} />
-      <Input value={formState.city} placeholder={'Город'} change={(city) => setFormState({ ...formState, city })} />
-      <Input
-        value={formState.spec}
-        placeholder={'Специальность'}
-        change={(spec) => setFormState({ ...formState, spec })}
-      />
-      <Input
-        value={formState.contactType}
-        placeholder={'Предпочитаемый способ связи'}
-        change={(contactType) => setFormState({ ...formState, contactType })}
-      />
-      <Input
-        value={formState.time}
-        placeholder={'Удобное время для связи'}
-        change={(time) => setFormState({ ...formState, time })}
-      />
-      <Input
-        value={formState.comment}
-        placeholder={'Дополнительные комментарии'}
-        change={(comment) => setFormState({ ...formState, comment })}
-      />
-      <FileButton
-        change={(file) => setFormState({ ...formState, file })}
-        fileName={formState.file?.name ?? ''}
-        remove={() => setFormState({ ...formState, file: null })}
-        text={'Прикрепить резюме'}
-      />
-      <Checkbox checked={formState.agree} change={() => setFormState({ ...formState, agree: !formState.agree })} />
+    <div className={styles.formWrapper}>
+      <form className={styles.form}>
+        <Input value={formState.name} placeholder={'Имя'} change={(name) => setFormState({ ...formState, name })} />
+        <Input
+          value={formState.phone}
+          placeholder={'Телефон'}
+          change={(phone) => setFormState({ ...formState, phone })}
+          type={'tel'}
+        />
+        <Input
+          value={formState.email}
+          placeholder={'E-mail'}
+          change={(email) => setFormState({ ...formState, email })}
+        />
+        <Input value={formState.city} placeholder={'Город'} change={(city) => setFormState({ ...formState, city })} />
+        <Input
+          value={formState.spec}
+          placeholder={'Специальность'}
+          change={(spec) => setFormState({ ...formState, spec })}
+        />
+        <Input
+          value={formState.contactType}
+          placeholder={'Предпочитаемый способ связи'}
+          change={(contactType) => setFormState({ ...formState, contactType })}
+        />
+        <Input
+          value={formState.time}
+          placeholder={'Удобное время для связи'}
+          change={(time) => setFormState({ ...formState, time })}
+        />
+        <Input
+          value={formState.comment}
+          placeholder={'Дополнительные комментарии'}
+          change={(comment) => setFormState({ ...formState, comment })}
+        />
+        <FileButton
+          change={(file) => setFormState({ ...formState, file })}
+          fileName={formState.file?.name ?? ''}
+          remove={() => setFormState({ ...formState, file: null })}
+          text={'Прикрепить резюме'}
+        />
+      </form>
+      <div className={styles.checkboxWrapper}>
+        <Checkbox checked={formState.agree} change={() => setFormState({ ...formState, agree: !formState.agree })} />
+      </div>
       {loading ? (
         <div className={styles.loading}>
           <Loader />
           <span>Загрузка</span>
         </div>
       ) : (
-        <Button click={sendForm} disabled={!isValid} />
+        <div className={styles.buttonWrapper}>
+          <Button click={sendForm} disabled={!isValid} />
+        </div>
       )}
-    </form>
+    </div>
   )
 }
 

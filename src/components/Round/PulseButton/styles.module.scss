@@ -95,3 +95,19 @@
     opacity: 0;
   }
 }
+
+@media screen and (max-width: 959px) {
+  .buttonWrapper {
+    width: 298px;
+    height: 82px;
+    position: absolute;
+
+    bottom: 50px;
+    left: 38.5px;
+
+    .button {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+}

@@ -309,3 +309,13 @@
     transform: rotate(-360deg);
   }
 }
+
+
+@media screen and (max-width: 959px) {
+  .roundWrapper {
+    transform: scale(0.5);
+    position: absolute;
+    top: 0;
+    left: -130px;
+  }
+}

@@ -26,8 +26,10 @@ const ClientTypeSwitch = ({ selectedClientType, change }: Props) => {
     <div className={styles.switch}>
       {width >= 1800 ? (
         <h1>{`Присоединяйся\nк нашему\nквалифицированному\nсообществу`}</h1>
+      ) : width >= 960 ? (
+        <h1>{`Присоединяйся к нашему\nквалифицированному сообществу`}</h1>
       ) : (
-        width >= 376 && <h1>{`Присоединяйся к нашему\nквалифицированному сообществу`}</h1>
+        <h1>{`Присоединяйся к нашему\nквалифицированному\nсообществу`}</h1>
       )}
       <div className={styles.buttonWrapper}>
         <button className={selectedClientType === ClientType.EMPLOYER ? styles.selected : ''} onClick={setEmployer}>

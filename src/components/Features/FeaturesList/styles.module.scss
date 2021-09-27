@@ -33,3 +33,30 @@
     row-gap: 75px;
   }
 }
+
+
+@media screen and (max-width: 959px) {
+  .featuresList {
+    grid-template-rows: repeat(6, max-content);
+    grid-template-columns: 1fr;
+
+    row-gap: 50px;
+
+    .item {
+      > * {
+        &:first-child {
+          margin-right: 30px;
+          width: 50px;
+          height: 50px;
+        }
+
+        &:last-child {
+          font-size: 16px;
+          line-height: 19px;
+
+          white-space: inherit;
+        }
+      }
+    }
+  }
+}

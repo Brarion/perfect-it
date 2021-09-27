@@ -13,7 +13,7 @@ const FeaturesList = () => {
       {featureList.map((feature) => (
         <div key={feature.text} className={styles.item}>
           <feature.icon />
-          <span>{width >= 1800 ? feature.text : width >= 376 ? feature.textMd : feature.textMd}</span>
+          <span>{width >= 1800 ? feature.text : width >= 960 ? feature.textMd : feature.textSm}</span>
         </div>
       ))}
     </div>

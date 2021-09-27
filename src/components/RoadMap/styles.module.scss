@@ -171,3 +171,79 @@
     }
   }
 }
+
+
+@media screen and (max-width: 959px) {
+  .roadMap {
+    height: auto;
+    background-position-x: calc((100vw - 376px + 2 * 20px) / 2 - 20px);
+    background-position-y: -30px;
+
+    @include smallPadding;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    > h1 {
+      font-size: 24px;
+      line-height: 29px;
+
+      margin-bottom: 15px;
+
+      white-space: inherit;
+    }
+
+    > h2 {
+      font-size: 18px;
+      line-height: 21px;
+
+      margin-bottom: 26px;
+
+      white-space: inherit;
+    }
+
+    .roadMapItems {
+
+      .roadMapItemsWrapper {
+        position: relative;
+
+        left: 0;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, max-content);
+        row-gap: 8px;
+
+        .item {
+          display: flex;
+          flex-direction: row;
+
+          > span {
+            white-space: inherit !important;
+          }
+
+          .indexBlock {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+            margin-bottom: 0;
+            height: 100%;
+
+            > span {
+              font-size: 48px;
+              line-height: 57px;
+            }
+
+            .line {
+              width: 4px;
+              height: 100%;
+
+              background-color: $blue-light;
+
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -26,3 +26,17 @@
     align-items: start;
   }
 }
+
+@media screen and (max-width: 959px){
+  .bigFormWrapper {
+    height: auto;
+    @include smallPadding;
+    padding-top: 60px;
+    padding-bottom: 57px;
+
+    flex-direction: column;
+
+    justify-content: start;
+    align-items: start;
+  }
+}

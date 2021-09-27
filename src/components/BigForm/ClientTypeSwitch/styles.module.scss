@@ -67,9 +67,31 @@
   .switch {
     margin-bottom: 68px;
 
-     > h1 {
-       font-size: 36px;
-       line-height: 43px;
-     }
+    > h1 {
+      font-size: 36px;
+      line-height: 43px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 959px) {
+  .switch {
+    margin-bottom: 40px;
+
+    > h1 {
+      font-size: 24px;
+      line-height: 29px;
+
+      margin-bottom: 20px;
+      padding-bottom: 0;
+    }
+
+    .buttonWrapper {
+      > button {
+        width: 168px;
+        height: 60px;
+      }
+    }
   }
 }

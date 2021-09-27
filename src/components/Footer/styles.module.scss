@@ -42,42 +42,46 @@
       }
     }
 
-    .secondCol {
+    .wrapper {
       display: flex;
-      flex-direction: column;
 
-      margin-right: 87px;
+      .secondCol {
+        display: flex;
+        flex-direction: column;
 
-      > * {
-        text-decoration: none;
-        color: white;
+        margin-right: 87px;
 
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 21px;
+        > * {
+          text-decoration: none;
+          color: white;
 
-        &:not(:last-child) {
-          margin-bottom: 10px;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
+
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
         }
       }
-    }
 
-    .thirdCol {
-      display: flex;
-      flex-direction: column;
+      .thirdCol {
+        display: flex;
+        flex-direction: column;
 
-      > * {
-        text-decoration: none;
-        color: white;
+        > * {
+          text-decoration: none;
+          color: white;
 
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 21px;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
 
-        &:not(:last-child) {
-          margin-bottom: 10px;
+          &:not(:last-child) {
+            margin-bottom: 10px;
 
-          font-weight: bold;
+            font-weight: bold;
+          }
         }
       }
     }
@@ -111,6 +115,73 @@
       padding-top: 87px;
 
       height: calc(272px - 87px);
+    }
+
+    .secondPart {
+      @include mediumPadding;
+    }
+  }
+}
+
+
+@media screen and (max-width: 959px) {
+  .footer {
+    .firstPart {
+      @include smallPadding;
+      padding-top: 63px;
+      padding-bottom: 63px;
+
+      height: auto;
+
+      justify-content: space-between;
+
+      .firstCol {
+        margin-right: 50px;
+
+        > * {
+          &:first-child {
+            width: 97px;
+            height: 33px;
+
+            margin-bottom: 27px;
+          }
+
+          &.socialMedia {
+            > a {
+              width: 23px;
+              height: 23px;
+            }
+          }
+        }
+      }
+
+      .wrapper {
+        flex-direction: column;
+
+        .secondCol {
+          margin-bottom: 34px;
+          font-size: 18px;
+          line-height: 21px;
+
+          margin-right: 0;
+        }
+
+        .thirdCol {
+          font-size: 18px;
+          line-height: 21px;
+        }
+      }
+    }
+
+    .secondPart {
+      @include smallPadding;
+      padding-top: 11px;
+      padding-bottom: 11px;
+
+      white-space: pre-line;
+      justify-content: start;
+
+      height: auto;
     }
   }
 }

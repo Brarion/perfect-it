@@ -64,3 +64,31 @@
     }
   }
 }
+
+@media screen and (max-width: 959px) {
+  .formWrapper {
+    .form {
+      display: flex;
+      flex-direction: column;
+
+      row-gap: 0;
+
+      margin-bottom: auto;
+
+      > * {
+        width: calc(335px - 22px);
+
+        margin-bottom: 12px;
+      }
+    }
+
+    .loading, .buttonWrapper {
+      width: 100%;
+    }
+
+    .checkboxWrapper {
+      margin-bottom: 47px;
+    }
+  }
+}
+

@@ -57,3 +57,26 @@
     }
   }
 }
+
+
+@media screen and (max-width: 959px) {
+  .round {
+    height: calc(692px - 60px - 77px);
+
+    @include smallPadding;
+    padding-top: 60px;
+    padding-bottom: 77px;
+
+    > h1 {
+      position: relative;
+      font-size: 24px;
+      line-height: 29px;
+
+      margin-bottom: 12px;
+    }
+
+    .buttonWrapper {
+      padding-top: 60px;
+    }
+  }
+}
